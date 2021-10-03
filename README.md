@@ -5,7 +5,7 @@ This is a tiny repo that solely house Matplotib paths for Tropical Storm and Hur
 ## What do the markers looks like:
 Great Question, that's the most important thing right.  
 
-<img src="./backend/TSmeta.svg">
+<img src="./backend/TSmeta.svg" alt="See repo for SVG of markers">
 
 
 ## Usage:
