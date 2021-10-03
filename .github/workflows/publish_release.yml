@@ -27,7 +27,7 @@ jobs:
           path: dist
 
       - name: Publish wheels to PyPI
-        if: github.event.base_ref == 'refs/heads/master'
+        if: github.event.base_ref == 'refs/heads/main'
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_TCMARKER_PASSWORD }}
