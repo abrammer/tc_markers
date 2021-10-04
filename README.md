@@ -1,9 +1,9 @@
 # TC Markers
 
-This is a tiny repo that solely house Matplotib paths for Tropical Storm and Hurricane symbols unneccesarily duplicated for NH and SH direction.  
+This is a tiny repo that solely houses Matplotib paths for Tropical Storm and Hurricane symbols, neccesarily duplicated for NH and SH direction.  
 
-## What do the markers looks like:
-Great Question, that's the most important thing right.  
+## What do the markers look like:
+Great question, that's the most important thing right. Here's the current view of them:
 
 <img src="./backend/TSmeta.svg" alt="See repo for SVG of markers">
 
@@ -43,10 +43,12 @@ for i, vmax in enumerate([33, 34, 64,]):
 
 fig.show()
 ```
-Only 4 markers are available, `NH_TS, NH_HU, SH_TS, SH_HU` alias of `TS` and `HU` for quick use of the most common.
+Only 4 markers are available, `NH_TS, NH_HU, SH_TS, SH_HU` alias of `TS` and `HU` for quick use of the NH hemisphere versions.  
 
 
 ## Contributing:
 Have a better TC Marker? Update the SVG using the 5 characters IDs above for each object. The current markers are not perfect but I don't know how to inkscape well.  Run the backend script to regenerate the `markers.py` file and submit a PR.  
 
 
+## Future:
+Maybe creating a child class of the matplotlib.path.Path would be nice. This could include a nicer __repr__ and a name attribute, allowing the user to check which marker came back from the selection function?
