@@ -5,12 +5,12 @@ This is a tiny repo that solely houses Matplotib paths for Tropical Storm and Hu
 ## What do the markers look like:
 Great question, that's the most important thing right. Here's the current view of them:
 
-<img src="./backend/TSmeta.svg" alt="See repo for SVG of markers">
+<img src="https://github.com/abrammer/tc_markers/raw/TCMarkerStyle_addition_for_TD/backend/TSmeta.svg" alt="See repo for SVG of markers">
 
 
 ## Usage:
 
-matplotlib normalises marker size by their extent.  The TS and HU markers will therefore need to be 2x larger than a plain 'o' marker.  If someone knows a way round that I'd love for a plain 'o' marker to be the same relative size.  
+Version 0.0.3 includes a TD symbol which will be the correct size for TS and HU comparison. 
 
 
 ```python
@@ -20,12 +20,18 @@ import tcmarkers
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-
-ax.plot(0.5, 0.5, marker=tcmarkers.HU, color='r', markeredgecolor='r', markersize=10)
-ax.plot(0.25, 0.25, marker=tcmarkers.TS, color='r', markeredgecolor='r', markersize=10)
-
+marker_kwargs = {'markersize': 25, 'color':'r', 'markeredgecolor':'r'}
+ax.plot(0.3, 0.25, marker=tcmarkers.HU, **marker_kwargs)
+ax.plot(0.3, 0.20, marker=tcmarkers.SH_HU, **marker_kwargs)
+ax.plot(0.25, 0.25, marker=tcmarkers.TS,**marker_kwargs)
+ax.plot(0.25, 0.20, marker=tcmarkers.SH_TS, **marker_kwargs)
+ax.plot(0.20, 0.25, marker=tcmarkers.TD, **marker_kwargs)
+ax.plot(0.20, 0.20, marker=tcmarkers.SH_TD, **marker_kwargs)
 fig.show()
 ```
+
+<img src="https://github.com/abrammer/tc_markers/blob/TCMarkerStyle_addition_for_TD/tests/expected.png?raw=true" alt="See repo for SVG of markers">
+
 
 Dynamic selection of symbol
 ```python
@@ -43,7 +49,7 @@ for i, vmax in enumerate([33, 34, 64,]):
 
 fig.show()
 ```
-Only 4 markers are available, `NH_TS, NH_HU, SH_TS, SH_HU` alias of `TS` and `HU` for quick use of the NH hemisphere versions.  
+5 markers are now available, `NH_TD, NH_TS, NH_HU, SH_TD, SH_TS, SH_HU` alias of `TD`, `TS` and `HU` for quick use of the NH hemisphere versions.  
 
 
 ## Contributing:
