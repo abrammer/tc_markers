@@ -44,7 +44,7 @@ from numpy import array, uint8
 """)
         for key, path in marks.items():
             outf.write(
-                f"{key} = {path}")  # relying on the matplotlib.path.Path repr
+                f"{key}_path = {path}")  # relying on the matplotlib.path.Path repr
             outf.write("\n\n")
 
 
