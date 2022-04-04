@@ -10,6 +10,8 @@ def test_plotting():
     ax = fig.add_subplot(111)
 
     kwargs = {'markersize': 25, 'color':'r', 'markeredgecolor':'r'}
+    ax.plot(0.35, 0.25, marker=tcmarkers.EX, **kwargs)
+    ax.plot(0.35, 0.20, marker=tcmarkers.SH_EX, **kwargs)
     ax.plot(0.3, 0.25, marker=tcmarkers.HU, **kwargs)
     ax.plot(0.3, 0.20, marker=tcmarkers.SH_HU, **kwargs)
     ax.plot(0.25, 0.25, marker=tcmarkers.TS,**kwargs)
@@ -17,7 +19,7 @@ def test_plotting():
     ax.plot(0.20, 0.25, marker=tcmarkers.TD, **kwargs)
     ax.plot(0.20, 0.20, marker=tcmarkers.TD, **kwargs)
 
-    ax.set_xlim(0.15, 0.35)
+    ax.set_xlim(0.15, 0.40)
     ax.set_ylim(0.15, 0.30)
     fig.savefig('result.png')
     result =  compare.compare_images('result.png', expectedimg, 0.001)

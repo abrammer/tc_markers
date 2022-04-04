@@ -1,7 +1,7 @@
 __version__ = "0.0.2"
 from matplotlib.markers import MarkerStyle
 from matplotlib.transforms import Affine2D
-from .markers import NH_HU_path, NH_TS_path, TD_path
+from .markers import NH_HU_path, NH_TS_path, TD_path, EX_path
 import numpy as np
 from matplotlib  import transforms
 import copy
@@ -25,6 +25,10 @@ TS = NH_TS
 TD = TCMarkerStyle(TD_path)
 NH_TD = TD
 SH_TD = TD
+
+EX = TCMarkerStyle(EX_path)
+NH_EX = EX
+SH_EX= EX
 
 
 def tc_marker(vmx, lat=5):

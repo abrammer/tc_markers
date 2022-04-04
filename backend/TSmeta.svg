@@ -6,7 +6,7 @@
    height="200"
    version="1.0"
    id="svg6"
-   sodipodi:docname="TSmeta.svg.2022_03_21_12_22_45.0.svg"
+   sodipodi:docname="TSmeta.svg"
    inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,16 +22,20 @@
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="6.4009187"
-     inkscape:cx="41.322193"
-     inkscape:cy="37.33839"
+     showgrid="true"
+     inkscape:zoom="4.8517716"
+     inkscape:cx="38.336512"
+     inkscape:cy="84.711326"
      inkscape:window-width="2047"
      inkscape:window-height="1402"
-     inkscape:window-x="675"
-     inkscape:window-y="77"
+     inkscape:window-x="821"
+     inkscape:window-y="35"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g4" />
+     inkscape:current-layer="g4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid163" />
+  </sodipodi:namedview>
   <g
      fill="#800000"
      stroke="#000000"
@@ -54,5 +58,10 @@
        style="opacity:1;fill:#d40000;fill-rule:evenodd"
        d="m 140.44046,23.709164 a 24.799999,24.700001 0 0 0 -24.80078,24.699219 24.799999,24.700001 0 0 0 24.80078,24.701172 24.799999,24.700001 0 0 0 24.79883,-24.701172 24.799999,24.700001 0 0 0 -24.79883,-24.699219 z m 0.21875,10.814453 a 14,14 0 0 1 14,14 14,14 0 0 1 -14,14 14,14 0 0 1 -14,-14 14,14 0 0 1 14,-14 z"
        inkscape:label="TD" />
+    <path
+       id="EX"
+       style="opacity:1;fill:#d40000;fill-rule:evenodd"
+       inkscape:label="EX"
+       d="M 30.068359 125.33203 A 24.799999 24.700001 0 0 0 5.2675781 150.03125 A 24.799999 24.700001 0 0 0 30.068359 174.73242 A 24.799999 24.700001 0 0 0 54.867188 150.03125 A 24.799999 24.700001 0 0 0 30.068359 125.33203 z M 30.287109 136.14648 A 14 14 0 0 1 38.080078 138.51562 L 30.267578 146.32812 L 22.472656 138.53516 A 14 14 0 0 1 30.287109 136.14648 z M 41.666016 142 A 14 14 0 0 1 44.287109 150.14648 A 14 14 0 0 1 41.898438 157.95898 L 33.802734 149.86328 L 41.666016 142 z M 18.912109 142.04492 L 26.730469 149.86328 L 18.65625 157.9375 A 14 14 0 0 1 16.287109 150.14648 A 14 14 0 0 1 18.912109 142.04492 z M 30.267578 153.39844 L 38.388672 161.51953 A 14 14 0 0 1 30.287109 164.14648 A 14 14 0 0 1 22.162109 161.50391 L 30.267578 153.39844 z " />
   </g>
 </svg>
