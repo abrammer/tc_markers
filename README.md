@@ -32,7 +32,7 @@ ax.plot(0.20, 0.20, marker=tcmarkers.SH_TD, **marker_kwargs)
 fig.show()
 ```
 
-<img src="https://github.com/abrammer/tc_markers/blob/TCMarkerStyle_addition_for_TD/tests/expected.png?raw=true" alt="See repo for SVG of markers">
+<img src="https://github.com/abrammer/tc_markers/blob/main/tests/expected.png?raw=true" alt="See repo for SVG of markers">
 
 
 Dynamic selection of symbol based on vmax.  Function based on string type coming next.
