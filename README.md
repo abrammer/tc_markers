@@ -10,7 +10,7 @@ Great question, that's the most important thing right. Here's the current view o
 
 ## Usage:
 
-Version 0.0.3 includes a TD symbol which will be the correct size for TS and HU comparison. 
+Version 0.0.3 includes a TD and EX symbol which will be the correct size for TS and HU comparison. 
 
 
 ```python
@@ -21,6 +21,8 @@ import tcmarkers
 fig = plt.figure()
 ax = fig.add_subplot(111)
 marker_kwargs = {'markersize': 25, 'color':'r', 'markeredgecolor':'r'}
+ax.plot(0.35, 0.25, marker=tcmarkers.EX, **marker_kwargs)
+ax.plot(0.35, 0.20, marker=tcmarkers.SH_EX, **marker_kwargs)
 ax.plot(0.3, 0.25, marker=tcmarkers.HU, **marker_kwargs)
 ax.plot(0.3, 0.20, marker=tcmarkers.SH_HU, **marker_kwargs)
 ax.plot(0.25, 0.25, marker=tcmarkers.TS,**marker_kwargs)
@@ -33,7 +35,8 @@ fig.show()
 <img src="https://github.com/abrammer/tc_markers/blob/TCMarkerStyle_addition_for_TD/tests/expected.png?raw=true" alt="See repo for SVG of markers">
 
 
-Dynamic selection of symbol
+Dynamic selection of symbol based on vmax.  Function based on string type coming next.
+
 ```python
 import matplotlib.pyplot as plt
 import tcmarkers
@@ -49,11 +52,11 @@ for i, vmax in enumerate([33, 34, 64,]):
 
 fig.show()
 ```
-5 markers are now available, `NH_TD, NH_TS, NH_HU, SH_TD, SH_TS, SH_HU` alias of `TD`, `TS` and `HU` for quick use of the NH hemisphere versions.  
+4 markers are now available, `TD`, `TS`, `HU` and `EX` these are available rotated for SH or original NH as well with the `NH_` or `SH_` prefix. e.g. `NH_TD`, `NH_TS`, `NH_HU`,`NH_EX`, `SH_TD`, `SH_TS`, `SH_HU`, `SH_EX`.
 
 
 ## Contributing:
-Have a better TC Marker? Update the SVG using the 5 characters IDs above for each object. The current markers are not perfect but I don't know how to inkscape well.  Run the backend script to regenerate the `markers.py` file and submit a PR.  
+Have a better TC Marker? Update the SVG using the 4 characters IDs above for each object. The current markers are not perfect but I don't know how to inkscape well.  Run the backend script to regenerate the `markers.py` file and submit a PR.  
 
 
 ## Future:
