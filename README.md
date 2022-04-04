@@ -5,7 +5,7 @@ This is a tiny repo that solely houses Matplotib paths for Tropical Storm and Hu
 ## What do the markers look like:
 Great question, that's the most important thing right. Here's the current view of them:
 
-<img src="https://github.com/abrammer/tc_markers/raw/TCMarkerStyle_addition_for_TD/backend/TSmeta.svg" alt="See repo for SVG of markers">
+<img src="https://github.com/abrammer/tc_markers/raw/main/backend/TSmeta.svg" alt="See repo for SVG of markers">
 
 
 ## Usage:
