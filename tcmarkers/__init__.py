@@ -1,4 +1,4 @@
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 from matplotlib.markers import MarkerStyle
 from matplotlib.transforms import Affine2D
 from .markers import NH_HU_path, NH_TS_path, TD_path, EX_path
