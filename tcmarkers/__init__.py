@@ -1,12 +1,14 @@
 __version__ = "0.0.3"
+
+import numpy as np
+from matplotlib import transforms
 from matplotlib.markers import MarkerStyle
 from matplotlib.transforms import Affine2D
-from .markers import NH_HU_path, NH_TS_path, TD_path, EX_path
-import numpy as np
-from matplotlib  import transforms
-import copy
+
+from .markers import EX_path, NH_HU_path, NH_TS_path, TD_path
 
 _MARKERSCALE = np.max(np.abs(NH_HU_path.vertices))
+
 
 class TCMarkerStyle(MarkerStyle):
     def _set_custom_marker(self, path):
@@ -16,8 +18,8 @@ class TCMarkerStyle(MarkerStyle):
 
 NH_HU = HU = TCMarkerStyle(NH_HU_path)
 NH_TS = TS = TCMarkerStyle(NH_TS_path)
-SH_TS = TCMarkerStyle(NH_TS_path.transformed(transforms.Affine2D().scale(-1,1)))
-SH_HU = TCMarkerStyle(NH_HU_path.transformed(transforms.Affine2D().scale(-1,1)))
+SH_TS = TCMarkerStyle(NH_TS_path.transformed(transforms.Affine2D().scale(-1, 1)))
+SH_HU = TCMarkerStyle(NH_HU_path.transformed(transforms.Affine2D().scale(-1, 1)))
 
 HU = NH_HU
 TS = NH_TS
@@ -28,7 +30,7 @@ SH_TD = TD
 
 EX = TCMarkerStyle(EX_path)
 NH_EX = EX
-SH_EX= EX
+SH_EX = EX
 
 
 def tc_marker(vmx, lat=5):
