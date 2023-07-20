@@ -22,6 +22,7 @@ def test_plotting():
 
     ax.set_xlim(0.15, 0.40)
     ax.set_ylim(0.15, 0.30)
+    ax.set_axis_off()
     fig.savefig('result.png')
     result = compare.compare_images('result.png', expectedimg, 0.001)
     if result is not None:
