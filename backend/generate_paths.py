@@ -44,7 +44,7 @@ from numpy import array, uint8
 """)
         for key, path in marks.items():
             outf.write(
-                f"{key}_path = {path}")  # relying on the matplotlib.path.Path repr
+                f"{key}_path = Path(vertices={repr(path.vertices)}, codes={repr(path.codes)})" )
             outf.write("\n\n")
 
 
