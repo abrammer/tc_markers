@@ -1,4 +1,9 @@
+"""
+Simple module to provide Tropical Cylcone styled Paths for matplotlib
+"""
 __version__ = "0.0.3"
+
+import bisect
 
 import numpy as np
 from matplotlib import transforms
@@ -11,8 +16,9 @@ _MARKERSCALE = np.max(np.abs(NH_HU_path.vertices))
 
 
 class TCMarkerStyle(MarkerStyle):
+    "A class representing marker types which are scaled to a common size."
     def _set_custom_marker(self, path):
-        self._transform = Affine2D().scale(1. / _MARKERSCALE)
+        self._transform = Affine2D().scale(1.0 / _MARKERSCALE)
         self._path = path
 
 
@@ -34,7 +40,7 @@ SH_EX = EX
 
 
 def tc_marker(vmx, lat=5):
-    """ Returns marker for given intensity and latitude
+    """Returns marker for given intensity and latitude
 
     Parameters
     ----------
@@ -53,7 +59,7 @@ def tc_marker(vmx, lat=5):
     ValueError
         if vmx is too great (< 500 kts), raise error as something is wrong
     """
-    import bisect
+
     limits = [34, 64, 500]
     if lat < 0:
         marks = [TD, SH_TS, SH_HU]
@@ -63,6 +69,6 @@ def tc_marker(vmx, lat=5):
     idx = bisect.bisect_right(limits, vmx)
     try:
         mark = marks[idx]
-    except IndexError:
-        raise ValueError("%d too high for dynamic marker choice x<500" % vmx)
+    except IndexError as exc:
+        raise ValueError(f"{vmx} too high for dynamic marker choice x<500") from exc
     return mark
