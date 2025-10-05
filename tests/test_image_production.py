@@ -6,11 +6,11 @@ from matplotlib.testing import compare, exceptions
 
 
 def test_plotting():
-    expectedimg = Path(__file__).resolve().parent / 'expected.png'
+    expectedimg = Path(__file__).resolve().parent / "expected.png"
     fig = plt.figure()
     ax = fig.add_subplot(111)
 
-    kwargs = {'markersize': 25, 'color': 'r', 'markeredgecolor': 'r'}
+    kwargs = {"markersize": 25, "color": "r", "markeredgecolor": "r"}
     ax.plot(0.35, 0.25, marker=tcmarkers.EX, **kwargs)
     ax.plot(0.35, 0.20, marker=tcmarkers.SH_EX, **kwargs)
     ax.plot(0.3, 0.25, marker=tcmarkers.HU, **kwargs)
@@ -22,8 +22,11 @@ def test_plotting():
 
     ax.set_xlim(0.15, 0.40)
     ax.set_ylim(0.15, 0.30)
-    fig.savefig('result.png')
-    result = compare.compare_images('result.png', expectedimg, 0.001)
+    # turn off x and y tick labels
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+    fig.savefig("result.png")
+    result = compare.compare_images("result.png", expectedimg, 0.001)
     if result is not None:
         print(result)
         raise exceptions.ImageComparisonFailure
