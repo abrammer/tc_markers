@@ -1,3 +1,7 @@
+[![Available on pypi](https://img.shields.io/pypi/v/tcmarkers.svg)](https://pypi.python.org/pypi/tcmarkers/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/tcmarkers)](https://pypistats.org/packages/tcmarkers)
+
+
 # TC Markers
 
 This is a tiny repo that solely houses Matplotib paths for Tropical Storm and Hurricane symbols, neccesarily duplicated for NH and SH direction.  
@@ -7,6 +11,10 @@ Great question, that's the most important thing right. Here's the current view o
 
 <img src="https://github.com/abrammer/tc_markers/raw/main/backend/TSmeta.svg" alt="See repo for SVG of markers">
 
+# Installation:
+```bash 
+pip install tcmarkers
+```
 
 ## Usage:
 
