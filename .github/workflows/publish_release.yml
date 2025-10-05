@@ -22,7 +22,7 @@ jobs:
 
       - name: Test the built distributions
         run: |
-          cd /dist
+          cd dist/
           python -m pip install tcmarkers-*.whl
           python -c "import tcmarkers; print(tcmarkers.__version__)"
 
