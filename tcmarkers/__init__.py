@@ -7,6 +7,11 @@ from matplotlib.transforms import Affine2D
 
 from .markers import EX_path, NH_HU_path, NH_TS_path, TD_path
 
+try:
+    from ._version import version as __version__
+except ImportError:
+    __version__ = "dev"
+
 _MARKERSCALE = np.max(np.abs(NH_HU_path.vertices))
 
 
