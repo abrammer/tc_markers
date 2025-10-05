@@ -1,4 +1,5 @@
 *_pycache_*
 _version.py
-dist
+dist/
 *egg*
+build/
