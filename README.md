@@ -1,6 +1,6 @@
 [![Available on pypi](https://img.shields.io/pypi/v/tcmarkers.svg)](https://pypi.python.org/pypi/tcmarkers/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/tcmarkers)](https://pypistats.org/packages/tcmarkers)
-
+[![Tests](https://github.com/abrammer/tc_markers/actions/workflows/test.yml/badge.svg)](https://github.com/abrammer/tc_markers/actions/workflows/test.yml)
 
 # TC Markers
 
